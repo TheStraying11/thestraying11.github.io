@@ -1,21 +1,59 @@
 <html>
 	<h1>Brownie Recipe!!</h1>
+	<h2>Units</h2>
+	<p id='units'>
+		<span>
+			weight:
+			<select id='weightUnit' onchange="doChange()">
+				<option data-value='g' data-mult=1 data-offset=0>
+					Grams
+				</option>
+				<option data-value='oz' data-mult=0.0352733686 data-offset=0>
+					Ounces
+				</option>
+			</select>
+		</span>
+		</br>
+		<span>
+			volume:
+			<select id='volumeUnit' onchange="doChange()">
+				<option data-value=' Tsp(s)' data-mult=1 data-offset=0>
+					Tsp
+				</option>
+				<option data-value='ml' data-mult=5 data-offset=0>
+					Millilitres
+				</option>
+			</select>
+		</span>
+		</br>
+		<span>
+			temp:
+			<select id='tempUnit' onchange="doChange()">
+				<option data-value='°C' data-mult=1 data-offset=0>
+					°C
+				</option>
+				<option data-value='°F' data-mult=1.8 data-offset=32>
+					°F
+				</option>
+			</select>
+		</span>
+	</p>
 	<h2>Ingredients:</h2>
 	<p id='ingredients'>
-		<span id='butter'>150g</span>: Unsalted Butter</br>
-		<span id='sugar'>300g</span>: Light Brown Muscovado Sugar</br>
-		<span id='cocoa'>75g</span>: Cocoa Powder</br>
-		<span id='flour'>150g</span>: Plain Flour</br>
-		<span id='bicarb'>1 UK tsp</span>: Bicarb</br>
-		<span id='salt'>Pinch</span>: Salt</br>
-		<span id='eggs'>4</span>: Large Eggs</br>
-		<span id='vanilla'>1 UK tsp</span>: Vanilla Extract</br>
-		<span id='chocolate'>150g</span>: Any Chocolate (try a mixture, I found that chocolate oranges work best)
+		<span class='weight' id='butter' data-value=150>150g</span>: Unsalted Butter</br>
+		<span class='weight' id='sugar' data-value=300>300g</span>: Light Brown Muscovado Sugar</br>
+		<span class='weight' id='cocoa' data-value=75>75g</span>: Cocoa Powder</br>
+		<span class='weight' id='flour' data-value=150>150g</span>: Plain Flour</br>
+		<span class='weight' id='chocolate' data-value=150>150g</span>: Any Chocolate (try a mixture, I found that chocolate oranges work best)</br>
+		<span class='volume' id='bicarb' data-value=1>1 Tsp(s)</span>: Bicarb</br>
+		<span class='volume' id='vanilla' data-value=1>1 Tsp(s)</span>: Vanilla Extract</br>
+		<span class='noUnit' id='eggs' data-value=4>4</span>: Large Eggs</br>
+		<span class='noUnit' id='salt' data-value='Pinch'>Pinch</span>: Salt
 	</p>
 	<h2>Prep:</h2>
 	<p id='prep'>
-		Preheat oven <span id='temp'>190°C</span></br>
-		Prepare Brownie Tin</br>
+		Preheat oven <span id='temp' data-value=190>190°C</span></br>
+		Grease Brownie Tin</br>
 		Chop Chocolate (Fairly Fine)</br>
 	</p>
 	<h2>Method:</h2>
@@ -30,4 +68,31 @@
 	<p id='timings'>
 		20-25m, checking consistency at 20m with a butter knife or skewer
 	</p>
+	<script type="text/javascript">
+		function doChange() {
+			var weightUnit = document.getElementById("weightUnit");
+			var volumeUnit = document.getElementById("volumeUnit");
+			var tempUnit = document.getElementById("tempUnit")
+
+			weightUnit = weightUnit.options[weightUnit.selectedIndex];
+			volumeUnit = volumeUnit.options[volumeUnit.selectedIndex];
+			tempUnit = tempUnit.options[tempUnit.selectedIndex];
+
+			for (i of document.getElementById("ingredients").children) {
+				if (i.tagName == "SPAN") {
+					if (i.className == "weight") {
+						var newValue = parseFloat((i.dataset.value * weightUnit.dataset.mult).toFixed(2))+parseFloat(volumeUnit.dataset.offset);
+						i.innerHTML = newValue.toString()+weightUnit.dataset.value;
+					}
+					if (i.className == "volume") {
+						var newValue = parseFloat((i.dataset.value * volumeUnit.dataset.mult).toFixed(2))+parseFloat(volumeUnit.dataset.offset);
+						i.innerHTML = newValue.toString()+volumeUnit.dataset.value;
+					}
+				}
+			}
+			var temp = document.getElementById("temp");
+			var newValue = parseFloat((temp.dataset.value * tempUnit.dataset.mult).toFixed(2))+parseFloat(tempUnit.dataset.offset);
+			temp.innerHTML = newValue.toString()+tempUnit.dataset.value;
+		}
+	</script>
 </html>
