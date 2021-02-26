@@ -5,10 +5,10 @@
 		<span>
 			Weight:
 			<select id='weightUnit' onchange="doChange()">
-				<option data-value='g' data-mult=1 data-offset=0>
+				<option data-value='$vg' data-mult=1 data-offset=0 data-decimals=0>
 					Grams
 				</option>
-				<option data-value='oz' data-mult=0.0352733686 data-offset=0>
+				<option data-value='$voz' data-mult=0.0352733686 data-offset=0 data-decimals=1>
 					Ounces
 				</option>
 			</select>
@@ -17,10 +17,10 @@
 		<span>
 			Volume:
 			<select id='volumeUnit' onchange="doChange()">
-				<option data-value=' Tsp(s)' data-mult=1 data-offset=0>
+				<option data-value='$v Tsp(s)' data-mult=1 data-offset=0 data-decimals=1>
 					Tsp
 				</option>
-				<option data-value='ml' data-mult=5 data-offset=0>
+				<option data-value='$vml' data-mult=5 data-offset=0 data-decimals=0>
 					Millilitres
 				</option>
 			</select>
@@ -29,13 +29,13 @@
 		<span>
 			Temperature:
 			<select id='tempUnit' onchange="doChange()">
-				<option data-value='°C' data-mult=1 data-offset=0>
+				<option data-value='$v°C' data-mult=1 data-offset=0 data-decimals=0>
 					°C
 				</option>
-				<option data-value='°F' data-mult=1.8 data-offset=32>
+				<option data-value='$v°F' data-mult=1.8 data-offset=32 data-decimals=0>
 					°F
 				</option>
-				<option data-value='Gas Mark' data-mult=0.072 data-offset=-8.72>
+				<option data-value='Gas Mark $v' data-mult=0.072 data-offset=-8.72 data-decimals=0>
 			</select>
 		</span>
 	</p>
@@ -82,18 +82,18 @@
 			for (i of document.getElementById("ingredients").children) {
 				if (i.tagName == "SPAN") {
 					if (i.className == "weight") {
-						var newValue = parseFloat((i.dataset.value * weightUnit.dataset.mult).toFixed(2))+parseFloat(volumeUnit.dataset.offset);
-						i.innerHTML = newValue.toString()+weightUnit.dataset.value;
+						var newValue = parseFloat((i.dataset.value * weightUnit.dataset.mult).toFixed(weightUnit.dataset.decimals))+parseFloat(weightUnit.dataset.offset);
+						i.innerHTML = weightUnit.dataset.value.replace("$v", newValue.toString());
 					}
 					if (i.className == "volume") {
-						var newValue = parseFloat((i.dataset.value * volumeUnit.dataset.mult).toFixed(2))+parseFloat(volumeUnit.dataset.offset);
-						i.innerHTML = newValue.toString()+volumeUnit.dataset.value;
+						var newValue = parseFloat((i.dataset.value * volumeUnit.dataset.mult).toFixed(volumeUnit.dataset.decimals))+parseFloat(volumeUnit.dataset.offset);
+						i.innerHTML = volumeUnit.dataset.value.replace("$v", newValue.toString());
 					}
 				}
 			}
 			var temp = document.getElementById("temp");
-			var newValue = parseFloat((temp.dataset.value * tempUnit.dataset.mult).toFixed(2))+parseFloat(tempUnit.dataset.offset);
-			temp.innerHTML = newValue.toString()+tempUnit.dataset.value;
+			var newValue = parseFloat((temp.dataset.value * tempUnit.dataset.mult).toFixed(tempUnit.dataset.decimals))+parseFloat(tempUnit.dataset.offset);
+			temp.innerHTML = tempUnit.dataset.value.replace("$v", newValue.toString());
 		}
 	</script>
 </html>
