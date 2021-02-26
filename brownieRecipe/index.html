@@ -84,17 +84,17 @@
 			for (i of document.getElementById("ingredients").children) {
 				if (i.tagName == "SPAN") {
 					if (i.className == "weight") {
-						var newValue = parseFloat((i.dataset.value * weightUnit.dataset.mult).toFixed(weightUnit.dataset.decimals))+parseFloat(weightUnit.dataset.offset);
+						var newValue = (parseFloat(i.dataset.value * weightUnit.dataset.mult)+parseFloat(weightUnit.dataset.offset)).toFixed(weightUnit.dataset.decimals);
 						i.innerHTML = weightUnit.dataset.value.replace("$v", newValue.toString());
 					}
 					if (i.className == "volume") {
-						var newValue = parseFloat((i.dataset.value * volumeUnit.dataset.mult).toFixed(volumeUnit.dataset.decimals))+parseFloat(volumeUnit.dataset.offset);
+						var newValue = (parseFloat(i.dataset.value * volumeUnit.dataset.mult)+parseFloat(volumeUnit.dataset.offset)).toFixed(volumeUnit.dataset.decimals);
 						i.innerHTML = volumeUnit.dataset.value.replace("$v", newValue.toString());
 					}
 				}
 			}
 			var temp = document.getElementById("temp");
-			var newValue = parseFloat((temp.dataset.value * tempUnit.dataset.mult).toFixed(tempUnit.dataset.decimals))+parseFloat(tempUnit.dataset.offset);
+			var newValue = (parseFloat(temp.dataset.value * tempUnit.dataset.mult)+parseFloat(tempUnit.dataset.offset)).toFixed(tempUnit.dataset.decimals);
 			temp.innerHTML = tempUnit.dataset.value.replace("$v", newValue.toString());
 		}
 	</script>
