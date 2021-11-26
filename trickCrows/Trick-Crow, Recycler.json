@@ -1,0 +1,31 @@
+{
+    "version": "1.2.0",
+    "rarity": "Common",
+    "name": "Trick-Crow, Recycler",
+    "level": 0,
+    "type": "Spell Card",
+    "effect": "Choose one of these effects\n● Return one of your banished \"Trick-Crow\" cards to your deck\n● Return one \"Trick-Crow\" card in your GY to your hand",
+    "atk": "",
+    "def": "",
+    "serial": "This card cannot be used in a Duel.",
+    "copyright": "\u00c2\u00a9 1993 YEMACHU",
+    "id": "",
+    "attribute": "Spell",
+    "pendulum": {
+        "enabled": false,
+        "effect": "",
+        "blue": "5",
+        "red": "5"
+    },
+    "link": {
+        "topLeft": false,
+        "topCenter": false,
+        "topRight": false,
+        "middleLeft": false,
+        "middleRight": false,
+        "bottomLeft": false,
+        "bottomCenter": false,
+        "bottomRight": false
+    },
+    "layout": "Spell"
+}

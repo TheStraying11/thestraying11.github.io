@@ -1,0 +1,33 @@
+{
+    "version": "1.0.0",
+    "name": "Trick-Crow, Shieldwing",
+    "level": 4,
+    "type": "Trap / Pendulum",
+    "icon": "None",
+    "effect": "While this card is in a Monster Zone or face-up in the Extra Deck it is treated as a Normal Monster \n(Winged Beast/WIND/Level 7/ATK 1900/ DEF 2600) (This card is NOT treated as a Trap.)\n\nWhen a monster effect is activated on the field: target that monster, and negate it's effects while \"Trick Crow, Shieldwing\" is face-up on the field (even if this card leaves the field.), and if you do, Special Summon this card in face-up Defense Position as a Normal Monster. If summoned this way, this monster's original DEF becomes equal to the targeted monster's ATK while that monster is on the field\n",
+    "atk": "0",
+    "def": "0",
+    "serial": "This card cannot be used in a Duel.",
+    "copyright": "twitter.com/kurapikaslut",
+    "attribute": "Trap",
+    "id": "YCM - EN000",
+    "pendulum": {
+        "enabled": true,
+        "effect": "If a Trick-Crow monster you control battles, your opponent cannot activate monster effects until the end of the Damage Step.",
+        "blue": "2",
+        "red": "2"
+    },
+    "link": {
+        "topLeft": false,
+        "topCenter": false,
+        "topRight": false,
+        "middleLeft": false,
+        "middleRight": false,
+        "bottomLeft": false,
+        "bottomCenter": false,
+        "bottomRight": false
+    },
+    "layout": "Trap",
+    "rarity": "secret",
+    "image": ""
+}

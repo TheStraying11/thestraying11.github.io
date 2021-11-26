@@ -1,0 +1,32 @@
+{
+    "version": "1.2.0",
+    "rarity": "Common",
+    "name": "Trick-Crow, Summoner",
+    "level": "3",
+    "type": "Winged Beast / Tuner / Effect",
+    "effect": "If you control no monsters, and your opponent controls one or more monsters: you can special summon this card from your hand",
+    "atk": "1200",
+    "def": "1800",
+    "serial": "This card cannot be used in a Duel.",
+    "copyright": "\u00c2\u00a9 1993 YEMACHU",
+    "id": "",
+    "attribute": "Wind",
+    "pendulum": {
+        "enabled": false,
+        "effect": "",
+        "blue": "5",
+        "red": "5"
+    },
+    "link": {
+        "topLeft": false,
+        "topCenter": false,
+        "topRight": false,
+        "middleLeft": false,
+        "middleRight": false,
+        "bottomLeft": false,
+        "bottomCenter": false,
+        "bottomRight": false
+    },
+    "layout": "Effect",
+    "image": ""
+}

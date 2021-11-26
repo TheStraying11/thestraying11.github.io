@@ -1,0 +1,32 @@
+{
+    "version": "1.0.0",
+    "name": "Trick-Crow, Ranger",
+    "level": "11",
+    "type": "Warrior / Synchro / Effect",
+    "icon": "None",
+    "effect": "1 or more \"Trick-Crow\" tuner monsters + 1 or more non-tuner monsters\nWhen this card is summoned, target one \"Trick-Crow\" monster in your Pendulum Zone, this card gains attack equal to 100 x the target's scale level\n\nIf a card or effect is activated that would destroy one face-up \"Trick-Crow\" monster you control, banish one of the Synchro materials used to summon this card; and negate the effect",
+    "atk": "2600",
+    "def": "2500",
+    "serial": "This card cannot be used in a Duel.",
+    "copyright": "twitter.com/kurapikaslut",
+    "attribute": "Wind",
+    "id": "YCM - EN000",
+    "pendulum": {
+        "enabled": false,
+        "effect": "",
+        "blue": "8",
+        "red": "8"
+    },
+    "link": {
+        "topLeft": false,
+        "topCenter": false,
+        "topRight": false,
+        "middleLeft": false,
+        "middleRight": false,
+        "bottomLeft": false,
+        "bottomCenter": false,
+        "bottomRight": false
+    },
+    "layout": "Synchro",
+    "rarity": "ultra"
+}

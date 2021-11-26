@@ -1,0 +1,31 @@
+{
+    "version": "1.2.0",
+    "rarity": "Common",
+    "name": "Trick-Crow, Handler",
+    "level": "4",
+    "type": "Trap / Pendulum",
+    "effect": "While this card is in a Monster Zone or face-up in the Extra Deck it is treated as an Effect Monster \n(Winged Beast/WIND/Level 4/ATK 1600/ DEF 2200) (This card is NOT treated as a Trap.) with the following effect: When this card is summoned from the Spell/Trap Zone, special summon one Trap card from your deck that can be treated as a level 4 or lower WIND monster\n\nWhen your opponent's monster declares an attack: Destroy 1 card in your pendulum zone; end the battle phase, then special summon this card in face-up Defense Position as an Effect Monster\n\n",
+    "atk": "",
+    "def": "",
+    "serial": "This card cannot be used in a Duel.",
+    "copyright": "\u00c2\u00a9 1993 YEMACHU",
+    "id": "YCM - EN000",
+    "attribute": "Trap",
+    "pendulum": {
+        "enabled": true,
+        "effect": "During your end phase, you can destroy this card, and add one \"Trick-Crow\" Pendulum card from your deck to your hand",
+        "blue": "3",
+        "red": "3"
+    },
+    "link": {
+        "topLeft": false,
+        "topCenter": false,
+        "topRight": false,
+        "middleLeft": false,
+        "middleRight": false,
+        "bottomLeft": false,
+        "bottomCenter": false,
+        "bottomRight": false
+    },
+    "layout": "Trap"
+}

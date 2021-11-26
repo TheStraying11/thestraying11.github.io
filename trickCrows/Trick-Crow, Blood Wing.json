@@ -1,0 +1,31 @@
+{
+    "version": "1.2.0",
+    "rarity": "ultra",
+    "name": "Trick-Crow, Blood Wing",
+    "level": "7",
+    "type": "Winged Beast / Xyz / Effect",
+    "effect": "2 Level 7 \"Trick-Crow\" Monsters\nIf you can pendulum summon level 7, you can pendulum summon this face-up card in your extra deck\nWhile this card has Xyz materials, it cannot be destroyed by battle.\nOnce per turn, after this card battles a monster it did not destroy, detach one Xyz material from this card, banish that monster, and if you do, inflict battle damage to your opponent equal to half of that monster's original attack\nIf this card in the Monster Zone would be destroyed, you can instead place it in your pendulum zone",
+    "atk": "2700",
+    "def": "2500",
+    "serial": "This card cannot be used in a Duel.",
+    "copyright": "\u00c2\u00a9 1993 YEMACHU",
+    "id": "",
+    "attribute": "Wind",
+    "pendulum": {
+        "enabled": true,
+        "effect": "Once per turn, increase the pendulum scale of your other pendulum card by 2 (max 8)",
+        "blue": "1",
+        "red": "1"
+    },
+    "link": {
+        "topLeft": false,
+        "topCenter": false,
+        "topRight": false,
+        "middleLeft": false,
+        "middleRight": false,
+        "bottomLeft": false,
+        "bottomCenter": false,
+        "bottomRight": false
+    },
+    "layout": "Xyz"
+}

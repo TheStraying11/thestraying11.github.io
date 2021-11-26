@@ -1,0 +1,31 @@
+{
+    "version": "1.2.0",
+    "rarity": "Common",
+    "name": "Trick-Crow, Magus",
+    "level": 0,
+    "type": "Trap / Pendulum",
+    "effect": "While this card is in a Monster Zone or face-up in the Extra Deck it is treated as an Effect Monster \n(Spellcaster/WIND/Tuner/Level 4/ATK 1800/ DEF 2000) (This card is NOT treated as a Trap.) with the following effect: When this card is summoned from the Spell/Trap Zone, return one Trap card that can be treated as a level 4 or lower WIND monster from your GY to your Hand\n\nWhen your opponent activates a spell/trap card (quick effect): Discard 1 card; Negate the activation, and if you do Destroy that card, then special summon this card in face-up Defense Position as an Effect Monster\n\n",
+    "atk": "",
+    "def": "",
+    "serial": "This card cannot be used in a Duel.",
+    "copyright": "twitter.com/kurapikaslut",
+    "id": "YCM - EN000",
+    "attribute": "Trap",
+    "pendulum": {
+        "enabled": true,
+        "effect": "If a \"Trick-Crow\" monster you control battles, your opponent cannot activate trap effects until the end of the Damage step.",
+        "blue": "6",
+        "red": "6"
+    },
+    "link": {
+        "topLeft": false,
+        "topCenter": false,
+        "topRight": false,
+        "middleLeft": false,
+        "middleRight": false,
+        "bottomLeft": false,
+        "bottomCenter": false,
+        "bottomRight": false
+    },
+    "layout": "Trap"
+}

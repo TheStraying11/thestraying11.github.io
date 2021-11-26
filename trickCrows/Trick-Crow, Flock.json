@@ -1,0 +1,31 @@
+{
+    "version": "1.0.0",
+    "name": "Trick-Crow, Flock",
+    "level": 4,
+    "type": "Spell Card",
+    "icon": "None",
+    "effect": "Excavate the top five cards of your deck, add one \"Trick-Crow\" Trap Card from among them to your hand, and place the rest on the bottom of your deck in any order",
+    "atk": "0",
+    "def": "0",
+    "serial": "This card cannot be used in a Duel.",
+    "copyright": "twitter.com/kurapikaslut",
+    "attribute": "None",
+    "id": "YCM - EN000",
+    "pendulum": {
+        "enabled": false,
+        "effect": "",
+        "blue": "5",
+        "red": "5"
+    },
+    "link": {
+        "topLeft": false,
+        "topCenter": false,
+        "topRight": false,
+        "middleLeft": false,
+        "middleRight": false,
+        "bottomLeft": false,
+        "bottomCenter": false,
+        "bottomRight": false
+    },
+    "layout": "Spell"
+}
