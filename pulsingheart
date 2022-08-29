@@ -1,0 +1,111 @@
+<html>
+  <style>
+    $size: 1000px;
+    $duration: 1.5s;
+    $timing: ease;
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .parent {
+      position: relative;
+      z-index: 1;
+
+      width: 100vw;
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: hsl(0, 0%, 95%);
+    }
+
+    .heart {
+      position: relative;
+
+      width: $size;
+      height: $size;
+
+      text-align: center;
+      line-height: $size;
+
+      background: linear-gradient(to bottom, #E53038, darken(desaturate(#E53038, 10), 5));
+      border-radius: 50%;
+      cursor: pointer;
+
+      box-shadow: 0px 7px 20px hsla(0, 0%, 0%, 0.2);
+      animation: beat $duration $timing 0s infinite;
+
+      span {
+        font-size: 200pt;
+
+        color: white;
+        text-shadow: 0px 0px 10px hsla(0, 0%, 100%, 0.4);
+      }
+
+      &:before, &:after {
+        content: "";
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        background-color: #E53038;
+        opacity: 0.4;
+        border-radius: inherit;
+      }
+
+      &:before {
+        z-index: -2;
+        animation: beat-before $duration $timing 100ms infinite;
+      }
+
+      &:after {
+        z-index: -1;
+        animation: beat-after $duration $timing 200ms infinite;
+      }
+    }
+
+
+
+    @keyframes beat {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes beat-before {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.15);
+      }
+    }
+
+    @keyframes beat-after {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.3);
+      }
+    }
+  </style>
+  <div class="parent">
+    <div class="heart">
+      <span>&hearts;</span>
+    </div>
+  </div>
+</html>
